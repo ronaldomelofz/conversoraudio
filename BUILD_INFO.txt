@@ -1,1 +1,25 @@
 # PROJETO HTML PURO - SEM BUILD NECESSÁRIO
+
+=== NETLIFY BUILD CONFIGURATION ===
+
+🚨 ATENÇÃO NETLIFY: Este é um projeto HTML PURO
+❌ NÃO instalar dependências
+❌ NÃO executar build
+❌ NÃO detectar frameworks
+✅ APENAS servir arquivos estáticos
+
+CONFIGURAÇÃO:
+- Build command: VAZIO ou echo
+- Publish directory: . (raiz)
+- Node.js: NÃO NECESSÁRIO
+
+ARQUIVOS PRINCIPAIS:
+- index.html (página principal)
+- netlify.toml (configuração)
+- _headers (headers HTTP)
+
+PROBLEMA CONHECIDO:
+Netlify força detecção de dependências mesmo em projetos HTML puros.
+Todas as configurações estão ajustadas para bypass completo.
+
+=== FIM ===

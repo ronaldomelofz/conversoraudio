@@ -1,0 +1,28 @@
+# Ignorar arquivos que podem causar detecção de framework
+node_modules/
+.git/
+.vscode/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Arquivos Python (locais)
+*.py
+*.pyc
+__pycache__/
+venv/
+env/
+
+# Arquivos de configuração que podem causar problemas
+yarn.lock
+package-lock.json
+composer.json
+requirements.txt
+Gemfile
+go.mod
+cargo.toml
+
+# Documentação desnecessária para deploy
+*.md
+!README.md 

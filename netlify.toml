@@ -1,14 +1,18 @@
 [build]
-  # CONFIGURAÇÃO PARA BYPASS COMPLETO DE DEPENDÊNCIAS
-  command = ""
+  # BYPASS TOTAL - NÃO EXECUTAR NADA
+  command = "echo 'Deploy estático - sem build necessário'"
   publish = "."
   ignore = "exit 0"
 
 [build.environment]
-  # FORÇA BYPASS DE INSTALAÇÃO
+  # FORÇA DESABILITAÇÃO COMPLETA
   SKIP_INSTALL = "true"
   DISABLE_YARN = "true"
+  DISABLE_NPM = "true"
   NODE_ENV = "production"
+  CI = "false"
+  NETLIFY_SKIP_YARN_INSTALL = "true"
+  NETLIFY_SKIP_NPM_INSTALL = "true"
 
 [[headers]]
   for = "/*"
@@ -32,8 +36,17 @@
   to = "/index.html"
   status = 200
 
-[[redirects]]
-  from = "/old-system"
-  to = "/"
-  status = 301
-  force = true 
+# CONFIGURAÇÃO ESPECIAL PARA EVITAR DETECÇÃO DE FRAMEWORKS
+[build.processing]
+  skip_processing = true
+
+[build.processing.css]
+  bundle = false
+  minify = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
+[build.processing.html]
+  pretty_urls = false 
