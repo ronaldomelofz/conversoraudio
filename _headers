@@ -1,0 +1,40 @@
+# 🎯 CONVERSOR DE ÁUDIO - HEADERS NETLIFY
+# ======================================
+# Headers específicos para funcionamento do Whisper.js
+# Necessários para WebAssembly e SharedArrayBuffer
+
+/*
+  # Headers essenciais para Whisper.js
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  
+  # CORS para CDN
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type
+  
+  # Segurança
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/js/*
+  # JavaScript específico
+  Content-Type: application/javascript
+  Cross-Origin-Resource-Policy: cross-origin
+
+*.wasm
+  # WebAssembly
+  Content-Type: application/wasm
+  Cross-Origin-Resource-Policy: cross-origin
+
+*.onnx
+  # Modelos AI
+  Content-Type: application/octet-stream
+  Cross-Origin-Resource-Policy: cross-origin
+
+/samples/*
+  # Arquivos de áudio de exemplo
+  Content-Type: audio/*
+  Cross-Origin-Resource-Policy: cross-origin 

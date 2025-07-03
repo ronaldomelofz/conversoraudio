@@ -1,0 +1,98 @@
+# 🎯 CONVERSOR DE ÁUDIO - CONFIGURAÇÃO NETLIFY
+# ============================================
+# Configurações para deploy no Netlify
+# GitHub: https://github.com/ronaldomelofz/conversoraudio
+
+[build]
+  # Diretório de publicação (raiz do projeto)
+  publish = "."
+  
+  # Comando de build (não necessário para site estático)
+  command = "echo 'Deploy direto - sem build necessário'"
+
+[build.environment]
+  # Variáveis de ambiente
+  NODE_VERSION = "18"
+
+# Headers para segurança e CORS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # CORS headers para permitir requests cross-origin
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+    
+    # Headers de segurança
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Headers específicos para WebAssembly e SharedArrayBuffer
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"
+    
+    # Cache headers para performance
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers específicos para arquivos WASM
+[[headers]]
+  for = "*.wasm"
+  [headers.values]
+    Content-Type = "application/wasm"
+    Cross-Origin-Resource-Policy = "cross-origin"
+
+# Headers específicos para arquivos JS
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+    Cross-Origin-Resource-Policy = "cross-origin"
+
+# Headers específicos para modelos AI
+[[headers]]
+  for = "*.onnx"
+  [headers.values]
+    Content-Type = "application/octet-stream"
+    Cross-Origin-Resource-Policy = "cross-origin"
+
+# Headers específicos para arquivos de áudio
+[[headers]]
+  for = "/samples/*"
+  [headers.values]
+    Content-Type = "audio/*"
+    Cross-Origin-Resource-Policy = "cross-origin"
+
+# Redirects para SPA (se necessário)
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Redirect 404 para index (SPA behavior)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Configurações de função (se usar Netlify Functions no futuro)
+[functions]
+  directory = "netlify/functions"
+
+# Configurações de development
+[dev]
+  framework = "static"
+  command = "python -m http.server 8000"
+  port = 8000
+  publish = "."
+  
+# Build para diferentes ambientes
+[context.production]
+  command = "echo 'Produção - Deploy direto'"
+
+[context.deploy-preview]
+  command = "echo 'Preview - Deploy direto'"
+
+[context.branch-deploy]
+  command = "echo 'Branch - Deploy direto'" 
