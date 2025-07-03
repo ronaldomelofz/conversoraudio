@@ -1,5 +1,10 @@
 # Netlify redirects file para forçar limpeza de cache
 # Força revalidação de arquivos JavaScript críticos
 
+# Netlify redirects - Redirecionamento para página funcional
+/funcional /conversor.html 200
+/novo /conversor.html 200
+/teste /conversor.html 200
+
 /app.js  /app.js  200!
 /js/*    /app.js  200! 
