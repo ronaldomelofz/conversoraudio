@@ -1,11 +1,15 @@
 {
-  "name": "conversor-audio-html",
+  "name": "conversor-audio-netlify",
   "version": "1.0.0",
-  "description": "Projeto HTML puro - sem dependências",
-  "main": "simple.html",
+  "description": "Sistema de conversão de áudio 100% frontend",
+  "private": true,
   "scripts": {
-    "build": "echo 'Build não necessário - projeto HTML puro'"
+    "build": "echo 'No build needed - pure HTML'",
+    "start": "echo 'Static site - no server needed'"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
 } 

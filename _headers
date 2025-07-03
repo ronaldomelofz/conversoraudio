@@ -1,0 +1,23 @@
+/*
+  Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0
+  Pragma: no-cache
+  Expires: 0
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: microphone=(self), camera=(), geolocation=(), payment=()
+
+/*.html
+  Content-Type: text/html; charset=utf-8
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+
+/*.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+
+/*.css
+  Content-Type: text/css; charset=utf-8
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0 

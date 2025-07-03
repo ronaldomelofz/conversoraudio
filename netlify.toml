@@ -1,36 +1,36 @@
 [build]
-  publish = "."
+  # CONFIGURAÇÃO PARA BYPASS COMPLETO DE DEPENDÊNCIAS
   command = ""
+  publish = "."
   ignore = "exit 0"
 
 [build.environment]
+  # FORÇA BYPASS DE INSTALAÇÃO
   SKIP_INSTALL = "true"
   DISABLE_YARN = "true"
-  DISABLE_NPM = "true"
+  NODE_ENV = "production"
 
-[[redirects]]
-  from = "/*"
-  to = "/simple.html"
-  status = 200
-  
 [[headers]]
   for = "/*"
   [headers.values]
-    Cache-Control = "no-cache"
+    # CACHE BUSTING EXTREMO
+    Cache-Control = "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+    Pragma = "no-cache"
+    Expires = "0"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
 
 [[headers]]
   for = "*.html"
   [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate, max-age=0"
-    Pragma = "no-cache"
-    Expires = "0"
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+    Content-Type = "text/html; charset=utf-8"
 
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate, max-age=0"
-    Pragma = "no-cache"
-    Expires = "0"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
   from = "/old-system"
