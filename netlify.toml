@@ -1,6 +1,13 @@
 [build]
   publish = "."
-  
+  command = ""
+  ignore = "exit 0"
+
+[build.environment]
+  SKIP_INSTALL = "true"
+  DISABLE_YARN = "true"
+  DISABLE_NPM = "true"
+
 [[redirects]]
   from = "/*"
   to = "/simple.html"

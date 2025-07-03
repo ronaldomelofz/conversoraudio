@@ -1,0 +1,14 @@
+# Arquivos Python locais (não para deploy)
+*.py
+*.pyc
+__pycache__/
+.venv/
+venv/
+requirements*.txt
+*.mp3
+transcricoes/
+.env
+
+# Mantém apenas HTML para deploy
+!simple.html
+!index.html 

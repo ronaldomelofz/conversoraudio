@@ -1,0 +1,11 @@
+{
+  "name": "conversor-audio-html",
+  "version": "1.0.0",
+  "description": "Projeto HTML puro - sem dependências",
+  "main": "simple.html",
+  "scripts": {
+    "build": "echo 'Build não necessário - projeto HTML puro'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+} 
