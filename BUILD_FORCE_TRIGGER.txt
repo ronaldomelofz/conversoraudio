@@ -1,0 +1,17 @@
+FORCE BUILD TRIGGER - PROJETO NOVO
+Timestamp: 2025-01-03 15:30:00
+Commit: 8b53940
+Status: FORCING COMPLETE REBUILD
+
+Este arquivo força o Netlify a fazer rebuild completo
+do projeto novo que foi criado do zero.
+
+MUDANÇAS:
+- Reset completo do repositório
+- Todos os arquivos antigos removidos  
+- Projeto novo com 3 arquivos apenas
+- Zero dependências problemáticas
+- Sistema funcional garantido
+
+OBJETIVO: Eliminar definitivamente o erro
+"Unsupported model type: whisper" 
