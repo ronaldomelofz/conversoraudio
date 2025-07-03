@@ -2,9 +2,18 @@
 
 Sistema simples e funcional para transcrição de áudio.
 
-## ✨ PROJETO NOVO - ZERO CACHE
+## 🚀 MIGRADO PARA VERCEL
 
-Este é um projeto completamente novo, criado do zero para resolver problemas de cache.
+Devido a problemas persistentes de build no Netlify, o projeto foi migrado para o Vercel.
+
+## ✨ DEPLOY INTELIGENTE
+
+O Vercel detecta automaticamente que é um projeto HTML puro e não tenta instalar dependências desnecessárias.
+
+## 🌐 Acesso
+
+**URL VERCEL:** https://conversoraudio.vercel.app
+**URL BACKUP:** https://ronaldomelofz.github.io/conversoraudio
 
 ## 🚀 Funcionalidades
 
@@ -14,14 +23,27 @@ Este é um projeto completamente novo, criado do zero para resolver problemas de
 - ✅ Interface moderna e responsiva
 - ✅ Processamento demonstrativo
 - ✅ Zero dependências problemáticas
+- ✅ Deploy automático no Vercel
 
-## 🌐 Acesso
+## ⚡ Deploy Local
 
-https://conversoraudio.netlify.app
+Para testar localmente:
+```bash
+python -m http.server 8080
+# Acesse: http://localhost:8080/simple.html
+```
 
 ## 👨‍💻 Desenvolvedor
 
 Ronaldo Melo - ronaldomelofz@gmail.com
+
+## 🔄 Histórico
+
+- v2025010319: Migração para Vercel
+- v2025010318: Tentativa Netlify NO-BUILD (falhou)
+- v2025010317: Versão minimalista (falhou)
+- v2025010316: Build fix (falhou)
+- v2025010315: Força bruta (falhou)
 
 ## 📄 Licença
 
