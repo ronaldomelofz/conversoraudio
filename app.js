@@ -1,11 +1,11 @@
 /**
- * 🎯 SISTEMA DE TRANSCRIÇÃO - VERSÃO DEFINITIVA
- * ============================================
- * Sistema 100% funcional sem dependências externas
- * Upload, validação, gravação e transcrição
+ * 🎯 SISTEMA DE TRANSCRIÇÃO - VERSÃO DEFINITIVA v2025010304
+ * ==========================================================
+ * Sistema 100% funcional sem dependências externas problemáticas
+ * Upload, validação, gravação e transcrição com demonstração completa
  */
 
-console.log('🚀 SISTEMA DE TRANSCRIÇÃO CARREGADO - VERSÃO DEFINITIVA');
+console.log('🚀 SISTEMA DE TRANSCRIÇÃO CARREGADO - VERSÃO DEFINITIVA v2025010304');
 
 class TranscriberSystem {
     constructor() {

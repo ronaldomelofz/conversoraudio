@@ -47,6 +47,13 @@
   Cross-Origin-Resource-Policy: cross-origin
   Access-Control-Allow-Origin: *
 
+# FORÇAR LIMPEZA DE CACHE - VERSÃO 2025010304
+/app.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+  Content-Type: application/javascript; charset=utf-8
+
 # Service Worker - sem cache
 /sw.js
   Cache-Control: no-cache, no-store, must-revalidate

@@ -1,0 +1,5 @@
+# Netlify redirects file para forçar limpeza de cache
+# Força revalidação de arquivos JavaScript críticos
+
+/app.js  /app.js  200!
+/js/*    /app.js  200! 
