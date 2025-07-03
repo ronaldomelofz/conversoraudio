@@ -1,0 +1,11 @@
+# Ignorar arquivos Python e dependências locais
+*.py
+*.pyc
+__pycache__/
+.venv/
+venv/
+requirements*.txt
+*.mp3
+.git/
+transcricoes/
+js/ 
