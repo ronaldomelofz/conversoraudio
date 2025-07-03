@@ -9,16 +9,18 @@
  * GitHub: https://github.com/ronaldomelofz/conversoraudio
  */
 
-import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.15.0';
+// Importar Whisper.js via CDN (versão estável)
+import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0';
 
-// Configurações globais
+// Configurações globais para funcionar no navegador
 env.allowRemoteModels = true;
 env.allowLocalModels = false;
+env.backends.onnx.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.14.0/dist/';
 
 class AudioTranscriber {
     constructor() {
         this.transcriber = null;
-        this.currentModel = 'openai/whisper-base';
+        this.currentModel = 'Xenova/whisper-tiny';
         this.isRecording = false;
         this.mediaRecorder = null;
         this.audioChunks = [];
@@ -117,12 +119,12 @@ class AudioTranscriber {
     
     handleModelChange(event) {
         const modelMap = {
-            'tiny': 'openai/whisper-tiny',
-            'base': 'openai/whisper-base',
-            'small': 'openai/whisper-small'
+            'tiny': 'Xenova/whisper-tiny',
+            'base': 'Xenova/whisper-base',
+            'small': 'Xenova/whisper-small'
         };
         
-        this.currentModel = modelMap[event.target.value] || 'openai/whisper-base';
+        this.currentModel = modelMap[event.target.value] || 'Xenova/whisper-tiny';
         
         // Reset transcriber para forçar reload do modelo
         this.transcriber = null;

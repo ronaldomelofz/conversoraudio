@@ -1,40 +1,64 @@
-# 🎯 CONVERSOR DE ÁUDIO - HEADERS NETLIFY
-# ======================================
-# Headers específicos para funcionamento do Whisper.js
-# Necessários para WebAssembly e SharedArrayBuffer
+# 🎯 CONVERSOR DE ÁUDIO - HEADERS NETLIFY OTIMIZADO
+# ===============================================
+# Headers específicos para Whisper.js v2.6.0
+# Suporte completo para WebAssembly e modelos AI
 
 /*
-  # Headers essenciais para Whisper.js
+  # Headers essenciais para funcionamento
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
   
-  # CORS para CDN
+  # CORS liberado para CDNs externos
   Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET, POST, OPTIONS
-  Access-Control-Allow-Headers: Content-Type
+  Access-Control-Allow-Methods: GET, POST, OPTIONS, HEAD
+  Access-Control-Allow-Headers: Content-Type, Range, Authorization
+  
+  # Cache otimizado
+  Cache-Control: public, max-age=31536000
   
   # Segurança
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
-  X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
 
+# JavaScript ES Modules
 /js/*
-  # JavaScript específico
-  Content-Type: application/javascript
+  Content-Type: application/javascript; charset=utf-8
   Cross-Origin-Resource-Policy: cross-origin
+  Access-Control-Allow-Origin: *
 
+# WebAssembly - crítico para Whisper.js
 *.wasm
-  # WebAssembly
   Content-Type: application/wasm
   Cross-Origin-Resource-Policy: cross-origin
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
 
+# Modelos ONNX - arquivos AI
 *.onnx
-  # Modelos AI
   Content-Type: application/octet-stream
   Cross-Origin-Resource-Policy: cross-origin
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
 
-/samples/*
-  # Arquivos de áudio de exemplo
-  Content-Type: audio/*
-  Cross-Origin-Resource-Policy: cross-origin 
+# JSON dos modelos
+*.json
+  Content-Type: application/json; charset=utf-8
+  Cross-Origin-Resource-Policy: cross-origin
+  Access-Control-Allow-Origin: *
+
+# Service Worker - sem cache
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/javascript; charset=utf-8
+
+# Arquivos de áudio
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.flac
+*.aac
+*.webm
+  Cross-Origin-Resource-Policy: cross-origin
+  Access-Control-Allow-Origin: * 
