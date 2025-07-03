@@ -1,0 +1,4 @@
+CACHE BUST TRIGGER - v2025010304
+Deploy timestamp: 2025-01-03 13:22:00
+Força limpeza completa de cache do Netlify
+Versão final funcional - app.js na raiz 

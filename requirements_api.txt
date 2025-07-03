@@ -1,0 +1,28 @@
+# 🎯 TRANSCRITOR AVANÇADO - API FLASK
+# Dependências necessárias para a API
+# Inspirado em TranscreveAPI mas MUITO mais poderoso!
+
+# ===== CORE DEPENDENCIES =====
+flask>=2.3.0
+werkzeug>=2.3.0
+
+# ===== TRANSCRIÇÃO (nossa vantagem competitiva) =====
+openai-whisper>=20231117
+librosa>=0.10.0
+numpy>=1.24.0
+
+# ===== PROCESSAMENTO DE ÁUDIO =====
+soundfile>=0.12.0  # Para librosa
+scipy>=1.10.0      # Para processamento de sinais
+
+# ===== UTILIDADES =====
+requests>=2.31.0   # Para downloads opcionais
+tqdm>=4.65.0       # Progress bars (incluído no whisper)
+
+# ===== OPCIONAL: MELHOR PERFORMANCE =====
+# torch>=2.0.0      # GPU acceleration (apenas se necessário)
+# numba>=0.57.0     # JIT compilation para librosa
+
+# ===== DESENVOLVIMENTO (opcional) =====
+# gunicorn>=21.0.0  # Para produção
+# uwsgi>=2.0.0      # Alternativa ao gunicorn 

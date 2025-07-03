@@ -1,4 +1,0 @@
-TRIGGER BUILD: 2025-01-03 10:30:00
-VERSÃO: Sistema Funcional Simplificado
-ARQUIVO PRINCIPAL: transcriber.js?v=2025010301
-STATUS: Deploy Forçado 
