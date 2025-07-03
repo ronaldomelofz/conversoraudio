@@ -1,8 +1,8 @@
 # Netlify redirects file - Página principal funcional
 # URL raiz redireciona direto para conversor funcional
 
-# ✅ REDIRECIONAMENTO PRINCIPAL - https://conversoraudio.netlify.app → conversor funcional
-/ /conversor.html 200
+# ✅ REDIRECIONAMENTO PRINCIPAL - https://conversoraudio.netlify.app → sistema limpo
+/ /sistema-limpo.html 200
 
 # Redirecionamentos alternativos
 /funcional /conversor.html 200
